@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/tiger_tools/AppImage-Installer %F
+Name=Instalar programa
+X-KDE-StartupNotify=true
+Icon=mintinstall
+Terminal=false
+Categories=Development;IDE;Qt;
+MimeType= application/vnd.appimage;
+NoDisplay=true
