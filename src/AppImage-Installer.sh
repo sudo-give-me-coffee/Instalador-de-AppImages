@@ -130,6 +130,8 @@ function getData(){
   echo "/usr/share/icons/hicolor/128x128"                          >> "${data_dir}/LIST"
   echo "/usr/share/icons/hicolor/128x128/apps"                     >> "${data_dir}/LIST"
   echo "/usr/share/icons/hicolor/128x128/apps/${package_name}.png" >> "${data_dir}/LIST"
+  echo "/usr/share/icons/pixmaps"                                  >> "${data_dir}/LIST"
+  echo "/usr/share/icons/pixmaps/${package_name}.png"              >> "${data_dir}/LIST"
   echo "/opt"                                                      >> "${data_dir}/LIST"
   echo "/opt/appimages-installed"                                  >> "${data_dir}/LIST"
   echo "/opt/appimages-installed/${hash}"                          >> "${data_dir}/LIST"
@@ -137,7 +139,9 @@ function getData(){
   #-----------------------------------------------------------------------------------------------------------------
   
   mv "${desktop_file}" "${data_dir}/LAUNCHER"
-  execline=$(grep -E '^Exec\=' "${data_dir}/LAUNCHER" | cut -c 6- | cut -d' ' -f1)
+  execline=$(grep -E '^Exec\=' "${data_dir}/LAUNCHER" | head -n1 | cut -c 6- | cut -d' ' -f1)
+  
+  echo ${execline} > "${data_dir}/TESTE"
   
   sed -i "s|^Exec=${execline}|Exec=/opt/appimages-installed/${hash}|g" "${data_dir}/LAUNCHER"  
   sed -i "s|^TryExec=.*|TryExec=/opt/appimages-installed/${hash}|g"    "${data_dir}/LAUNCHER"
@@ -164,6 +168,8 @@ function getData(){
     cp  "ICON_64"              "/usr/share/icons/hicolor/64x64/apps/$(cat PACKAGENAME).png"
     cp  "ICON"                 "/usr/share/icons/hicolor/128x128/apps/$(cat PACKAGENAME).png"
     cp  "$(cat APPIMAGE_FILE)" "/opt/appimages-installed/$(cat HASH)"
+    # Fallback pro Whisker Menu
+    cp  "ICON_64"              "/usr/share/pixmaps/$(cat PACKAGENAME).png"
     
     chmod +x  "/opt/appimages-installed/$(cat HASH)"
     
