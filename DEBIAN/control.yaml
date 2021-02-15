@@ -1,0 +1,7 @@
+Package: appimage-installer
+Priority: optional
+Version: 1.0.1
+Architecture: amd64
+Maintainer: Natanael Barbosa Santos
+Depends: yad, dpkg
+Description: Permite instalar pacotes .AppImage como se fossem .deb
