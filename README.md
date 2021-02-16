@@ -9,7 +9,7 @@
   <tr>
     <th class="tg-0lax"><img src="src/appimage.png"></img></th>
     <th class="tg-0lax"><h1>Instalador de AppImages</h1></th>
-    <th class="tg-0lax"><h1><a href="https://github.com/sudo-give-me-coffee/AppImage-as-DEB/releases/download/download/appimage-installer.deb">Baixar</a></h1></th>
+    <th class="tg-0lax"><h1><a href="https://github.com/sudo-give-me-coffee/Instalador-de-AppImages/releases/download/download/appimage-installer.deb">Baixar</a></h1></th>
   </tr>
 </thead>
 </table>
