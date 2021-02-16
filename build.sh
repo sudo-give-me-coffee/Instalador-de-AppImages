@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-
-echo ${TELEGRAM_ID}
-exit
-
 # ImageMagick
 wget -c "https://download.imagemagick.org/ImageMagick/download/binaries/magick"
 chmod +x magick
@@ -50,7 +46,7 @@ arch=$(grep "Architecture:" pacote/DEBIAN/control | cut -d' ' -f2)
 dpkg -b pacote ${name}_${vers}_${arch}.deb
 
 # Envia a mensagem pro grupo do TigerOS
-curl -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendDocument?chat_id=${TELEGRAM_ID}" -F document=@./"${name}_${vers}_${arch}.deb" 
-curl -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" -d "chat_id=${TELEGRAM_ID}&text=#Pacote_TigerOS_finalizado"          
+curl -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendDocument?chat_id=${TELEGRAM_ID}" -F document=@./"${name}_${vers}_${arch}.deb"  > /dev/null
+curl -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" -d "chat_id=${TELEGRAM_ID}&text=#Pacote_TigerOS_finalizado"           > /dev/null
 
 
