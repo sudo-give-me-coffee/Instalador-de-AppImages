@@ -16,7 +16,7 @@ cp -rf squashfs-root/* pacote/usr/tigertools
 rm -rf squashfs-root/
 
 # Arquivos de controle
-cp "src/DEBIAN"/* pacote/DEBIAN
+cp "DEBIAN"/* pacote/DEBIAN
 
 # Fontes
 cp src/* "pacote/usr/tigertools/"
