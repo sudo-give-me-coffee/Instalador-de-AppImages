@@ -11,6 +11,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      TELEGRAM_TOKEN: ${{TELEGRAM.TG_TOKEN}}
+      TELEGRAM_ID:    ${{TELEGRAM.TG_GROUP_ID}}
     steps:
       - uses: actions/checkout@v2
       - name: Constroi o pacote
