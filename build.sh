@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-echo ${TELEGRAM_ID
+echo ${TELEGRAM_ID}
 exit
 
 # ImageMagick
