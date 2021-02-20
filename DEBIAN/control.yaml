@@ -3,5 +3,5 @@ Priority: optional
 Version: 1.0.1
 Architecture: amd64
 Maintainer: Natanael Barbosa Santos
-Depends: yad, dpkg
+Depends: yad, dpkg, librsvg2-bin
 Description: Permite instalar pacotes .AppImage como se fossem .deb
