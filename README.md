@@ -16,6 +16,8 @@
 
 # O que é?
 
+## #somostodosesquizo
+
 É uma ferramenta que faz uma instalação falsa de AppImages como se fossem pacotes Debian, bastando dar dois cliques no arquivo. A ideia é que o uso dos AppImages seja similar aos `.exe`do Windows essa ferramenta foi desenvolvida para a distribuição Linux TigerOS sob demanda
 
 # Como instalar?
